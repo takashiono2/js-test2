@@ -17,6 +17,8 @@
       cursor: pointer;
       transition: 0.8s;
       margin: 0 8px 8px 0;
+      text-align: center;
+      line-height: 100px;
     }
     .circle{
       background-color: pink;
@@ -29,19 +31,21 @@
   
   <script>
     'use strict';
-    const div = document.createElement('div');
-    div.classList.add('box');
-    div.addEventListener('click',()=>{
-      div.classList.toggle('circle');
-    });
-      document.body.appendChild(div);
+    for(let i=1 ;i<50 ;i++){
+      const div = document.createElement('div');
+      div.classList.add('box');
+      div.textContent = i;
+      div.addEventListener('click',()=>{
+        div.classList.toggle('circle');
+      });
+        document.body.appendChild(div);
     // <div class="box circle></div> を作りたい
-
+    }
 
     // const target1 = document.getElementById('target1'); 
     // const target2 = document.getElementById('target2'); 
     // const target3 = document.getElementById('target3'); 
-
+    //　直し
 
     // target1.addEventListener('click', () => {
     //   target1.classList.toggle('circle') = '50%'
